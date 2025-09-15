@@ -20,18 +20,18 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - 20% smaller font */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#products" className="text-gray-700 hover:text-pink-600 transition-colors font-medium">
+            <a href="#products" className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm">
               PRODUCTS ▼
             </a>
-            <a href="#store-locator" className="text-gray-700 hover:text-pink-600 transition-colors font-medium">
+            <a href="#store-locator" className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm">
               STORE LOCATOR
             </a>
-            <a href="#about" className="text-gray-700 hover:text-pink-600 transition-colors font-medium">
+            <a href="#about" className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm">
               ABOUT ▼
             </a>
-            <a href="#contact" className="text-gray-700 hover:text-pink-600 transition-colors font-medium">
+            <a href="#contact" className="text-gray-700 hover:text-pink-600 transition-colors font-medium text-sm">
               CONTACT US
             </a>
           </nav>
