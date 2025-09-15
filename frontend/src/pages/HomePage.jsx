@@ -44,115 +44,113 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
-          <div className="space-y-8 z-10 relative">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+        {/* Left side content */}
+        <div className="absolute left-0 top-0 w-1/3 h-full flex items-center z-10">
+          <div className="p-8 space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               ZERO SUGAR<br />
               <span className="text-pink-600">FOCUS ENHANCING</span><br />
               HYDRATION
             </h1>
-            <p className="text-gray-600 text-xl leading-relaxed">
+            <p className="text-gray-600 text-lg leading-relaxed">
               NERV is an innovative <span className="text-pink-600 font-semibold">premium focus enhancement</span> drink 
-              designed to optimize <span className="text-gray-900 font-semibold">cognitive performance</span> and mental clarity. 
-              A carefully formulated blend of <span className="text-pink-600 font-semibold">natural nootropics</span>, 
-              <span className="text-gray-900 font-semibold">adaptogens</span>, and brain-boosting nutrients that promote 
-              <span className="text-pink-600 font-semibold">alpha brainwave activity</span> for sustained focus.
+              designed to optimize <span className="text-gray-900 font-semibold">cognitive performance</span> and mental clarity.
             </p>
             
             {/* Key stats */}
-            <div className="grid grid-cols-3 gap-4 py-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-600">125mg</div>
+            <div className="grid grid-cols-1 gap-3 py-4">
+              <div className="text-center bg-pink-100 rounded-lg p-3">
+                <div className="text-2xl font-bold text-pink-600">125mg</div>
                 <div className="text-sm text-gray-600">Caffeine</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-600">0g</div>
+              <div className="text-center bg-gray-100 rounded-lg p-3">
+                <div className="text-2xl font-bold text-gray-900">0g</div>
                 <div className="text-sm text-gray-600">Sugar</div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-600">8-12Hz</div>
+              <div className="text-center bg-blue-100 rounded-lg p-3">
+                <div className="text-2xl font-bold text-blue-600">8-12Hz</div>
                 <div className="text-sm text-gray-600">Alpha Waves</div>
               </div>
             </div>
             
             <Button 
-              className="bg-pink-600 hover:bg-pink-700 text-white px-12 py-6 text-xl font-semibold rounded-lg"
+              className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 text-lg font-semibold rounded-lg w-full"
               onClick={() => document.getElementById('section-1').scrollIntoView({ behavior: 'smooth' })}
             >
               EXPERIENCE FLOW STATE
             </Button>
           </div>
+        </div>
 
-          {/* Right content - Why NERV expanded */}
-          <div className="space-y-6 z-10 relative">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose NERV?</h2>
-            <div className="grid grid-cols-1 gap-4">
-              <Card className="bg-pink-50 border-pink-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-4 flex items-center space-x-3">
-                  <Brain className="w-8 h-8 text-pink-600 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Enhanced Focus & Concentration</div>
-                    <div className="text-sm text-gray-600">Improves attention span and mental clarity for demanding tasks</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-green-50 border-green-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-4 flex items-center space-x-3">
-                  <Waves className="w-8 h-8 text-green-600 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Alpha Brainwave Activation</div>
-                    <div className="text-sm text-gray-600">Promotes relaxed alertness state for optimal cognitive performance</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-4 flex items-center space-x-3">
-                  <Zap className="w-8 h-8 text-blue-600 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Sustained Energy Without Crashes</div>
-                    <div className="text-sm text-gray-600">Clean energy from L-theanine and caffeine synergy</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-purple-50 border-purple-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-4 flex items-center space-x-3">
-                  <Target className="w-8 h-8 text-purple-600 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Flow State Facilitation</div>
-                    <div className="text-sm text-gray-600">Helps achieve deep focus and peak performance zones</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-orange-50 border-orange-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-4 flex items-center space-x-3">
-                  <Shield className="w-8 h-8 text-orange-600 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Stress Resilience</div>
-                    <div className="text-sm text-gray-600">Adaptogens help manage cortisol and mental fatigue</div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-teal-50 border-teal-200 hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-4 flex items-center space-x-3">
-                  <TreePine className="w-8 h-8 text-teal-600 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Natural Nootropic Formula</div>
-                    <div className="text-sm text-gray-600">Scientifically-backed natural compounds with zero artificial additives</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+        {/* Right side content - Why NERV */}
+        <div className="absolute right-0 top-0 w-1/3 h-full flex items-center z-10">
+          <div className="p-8 space-y-4">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose NERV?</h2>
+            
+            <Card className="bg-pink-50 border-pink-200 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-4 flex items-center space-x-3">
+                <Brain className="w-6 h-6 text-pink-600 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-gray-900 text-sm">Enhanced Focus</div>
+                  <div className="text-xs text-gray-600">Improves attention span</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-green-50 border-green-200 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-4 flex items-center space-x-3">
+                <Waves className="w-6 h-6 text-green-600 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-gray-900 text-sm">Alpha Brainwaves</div>
+                  <div className="text-xs text-gray-600">Relaxed alertness state</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-4 flex items-center space-x-3">
+                <Zap className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-gray-900 text-sm">Sustained Energy</div>
+                  <div className="text-xs text-gray-600">No crashes or jitters</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-purple-50 border-purple-200 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-4 flex items-center space-x-3">
+                <Target className="w-6 h-6 text-purple-600 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-gray-900 text-sm">Flow State</div>
+                  <div className="text-xs text-gray-600">Peak performance zones</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-orange-50 border-orange-200 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-4 flex items-center space-x-3">
+                <Shield className="w-6 h-6 text-orange-600 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-gray-900 text-sm">Stress Resilience</div>
+                  <div className="text-xs text-gray-600">Adaptogen support</div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-teal-50 border-teal-200 hover:shadow-lg transition-all duration-300">
+              <CardContent className="p-4 flex items-center space-x-3">
+                <TreePine className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                <div>
+                  <div className="font-semibold text-gray-900 text-sm">Natural Formula</div>
+                  <div className="text-xs text-gray-600">Zero artificial additives</div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
           <Button 
             variant="ghost" 
             size="sm" 
