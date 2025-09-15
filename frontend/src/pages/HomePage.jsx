@@ -1,32 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { ChevronDown, Brain, Zap, Shield, Focus, Droplets, Star } from 'lucide-react';
+import React, { useEffect, useState, useRef } from 'react';
+import { ChevronDown, Brain, Zap, Shield, Focus, Droplets, Star, Activity, Waves, Target, TreePine, Sparkles, FlaskConical } from 'lucide-react';
 import Header from '../components/Header';
 import ProductBottle from '../components/ProductBottle';
 import ScrollSection from '../components/ScrollSection';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import { useScrollHook } from '../hooks/useScrollHook';
 
 const HomePage = () => {
-  const [currentSection, setCurrentSection] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-      sections.forEach((section, index) => {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
-
-        if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
-          setCurrentSection(index);
-        }
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const bottleRef = useRef(null);
+  const { scrollProgress, currentSection, bottlePosition } = useScrollHook(bottleRef);
 
   const scrollToNext = () => {
     const nextSection = document.getElementById(`section-${Math.min(currentSection + 1, 2)}`);
