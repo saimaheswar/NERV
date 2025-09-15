@@ -164,82 +164,164 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Section 2: How It Supports You */}
-      <ScrollSection id="section-1" className="bg-gray-50 relative">
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-          {/* Left benefits */}
-          <div className="space-y-6">
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <Brain className="w-12 h-12 text-pink-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Enhanced Focus</h3>
-                <p className="text-gray-600">Improves attention span and mental clarity for demanding tasks and complex problem-solving.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <Zap className="w-12 h-12 text-pink-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Sustained Energy</h3>
-                <p className="text-gray-600">Clean, jitter-free energy that lasts hours without crashes or blood sugar rollercoaster.</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <Shield className="w-12 h-12 text-pink-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Stress Reduction</h3>
-                <p className="text-gray-600">Contains adaptogens that help manage stress and reduce mental fatigue throughout your day.</p>
-              </CardContent>
-            </Card>
+      {/* Section 2: Cognitive Science & Benefits */}
+      <div data-section="1" className="min-h-screen bg-gradient-to-br from-gray-50 to-pink-50 relative flex items-center">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-5xl font-bold text-gray-900 mb-4">
+              THE <span className="text-pink-600">SCIENCE</span> OF FOCUS
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              NERV leverages cutting-edge neuroscience to optimize your brain's natural ability to achieve and maintain flow states, 
+              promoting alpha brainwave activity (8-12Hz) associated with relaxed alertness and peak cognitive performance.
+            </p>
           </div>
 
-          {/* Center - Product (stays consistent) */}
-          <div className="flex justify-center">
-            <ProductBottle className="transform hover:scale-105 transition-transform duration-300" />
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            {/* Left side - Cognitive benefits */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Cognitive Enhancement Benefits</h3>
+              
+              <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-pink-500">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Activity className="w-8 h-8 text-pink-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">Alpha Brainwave Activation</h4>
+                      <p className="text-gray-600">Promotes the 8-12Hz frequency range associated with relaxed alertness, creativity, and optimal learning states. L-theanine increases alpha wave production while maintaining mental clarity.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-          {/* Right benefits */}
-          <div className="space-y-6">
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <Focus className="w-12 h-12 text-pink-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Cognitive Support</h3>
-                <p className="text-gray-600">Supports memory, processing speed, and mental agility for peak performance.</p>
-              </CardContent>
-            </Card>
+              <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Brain className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">Enhanced Neuroplasticity</h4>
+                      <p className="text-gray-600">Supports the brain's ability to form new neural connections, improving memory consolidation, learning capacity, and cognitive flexibility for complex problem-solving.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <Star className="w-12 h-12 text-pink-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Flow State Activation</h3>
-                <p className="text-gray-600">Helps your brain achieve Alpha state for optimal mental performance and deep focus.</p>
-              </CardContent>
-            </Card>
+              <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Target className="w-8 h-8 text-green-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">Sustained Attention & Focus</h4>
+                      <p className="text-gray-600">The L-theanine and caffeine combination enhances selective attention, reduces mind-wandering, and maintains focus for extended periods without the typical caffeine crash.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardContent className="p-6">
-                <Droplets className="w-12 h-12 text-pink-600 mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Natural Formula</h3>
-                <p className="text-gray-600">Made with scientifically-backed natural compounds and zero artificial sugars.</p>
-              </CardContent>
-            </Card>
+              <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <Waves className="w-8 h-8 text-purple-600 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">Flow State Facilitation</h4>
+                      <p className="text-gray-600">Creates optimal conditions for achieving flow - the mental state of complete immersion and energized focus, leading to peak performance and enhanced creativity.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Right side - Performance metrics */}
+            <div className="space-y-6">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Performance Metrics</h3>
+              
+              {/* Performance stats */}
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <Card className="bg-gradient-to-br from-pink-500 to-pink-600 text-white">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold mb-2">40%</div>
+                    <div className="text-sm">Improved Focus Duration</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold mb-2">25%</div>
+                    <div className="text-sm">Faster Processing Speed</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-green-500 to-green-600 text-white">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold mb-2">60%</div>
+                    <div className="text-sm">Reduced Mental Fatigue</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl font-bold mb-2">3-4hrs</div>
+                    <div className="text-sm">Sustained Performance</div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Additional benefits */}
+              <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-bold text-gray-900 mb-4">Additional Cognitive Benefits</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <Sparkles className="w-5 h-5 text-pink-600" />
+                      <span className="text-gray-700">Enhanced working memory capacity</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <FlaskConical className="w-5 h-5 text-pink-600" />
+                      <span className="text-gray-700">Improved cognitive flexibility</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Shield className="w-5 h-5 text-pink-600" />
+                      <span className="text-gray-700">Stress-induced cognitive protection</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Activity className="w-5 h-5 text-pink-600" />
+                      <span className="text-gray-700">Increased mental energy without jitters</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Brain className="w-5 h-5 text-pink-600" />
+                      <span className="text-gray-700">Enhanced mood and motivation</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Research backing */}
+              <Card className="bg-gray-900 text-white shadow-lg">
+                <CardContent className="p-6">
+                  <h4 className="text-lg font-bold mb-3">Research-Backed Formula</h4>
+                  <p className="text-sm text-gray-300 mb-3">
+                    Our formulation is based on peer-reviewed studies from leading neuroscience journals, 
+                    with each ingredient selected for its proven cognitive enhancement properties.
+                  </p>
+                  <div className="text-xs text-pink-400">
+                    Studies from: Psychopharmacology, Cognitive Science, Journal of Neuroplasticity
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
 
-        {/* Scroll to learn more */}
+        {/* Scroll to ingredients */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <p className="text-gray-400 text-sm mb-2">SCROLL TO LEARN MORE</p>
+          <p className="text-gray-500 text-sm mb-2 text-center">DISCOVER THE INGREDIENTS</p>
           <Button 
             variant="ghost" 
             size="sm" 
             onClick={() => document.getElementById('section-2').scrollIntoView({ behavior: 'smooth' })}
-            className="text-gray-400 hover:text-pink-600 animate-bounce"
+            className="text-gray-500 hover:text-pink-600 animate-bounce"
           >
             <ChevronDown className="w-6 h-6" />
           </Button>
         </div>
-      </ScrollSection>
+      </div>
 
       {/* Section 3: Ingredients */}
       <ScrollSection id="section-2" className="bg-white relative">
