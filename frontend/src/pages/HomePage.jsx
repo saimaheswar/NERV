@@ -22,14 +22,14 @@ const HomePage = () => {
     <div className="min-h-screen bg-white relative">
       <Header />
       
-      {/* Fixed bottle hook in the center */}
+      {/* Fixed bottle hook in the center - always centered */}
       <div
         ref={bottleRef}
         className="fixed z-20 pointer-events-none transition-all duration-500 ease-out"
         style={{
-          left: `${bottlePosition.x}px`,
-          top: `${bottlePosition.y}px`,
-          transform: `scale(${0.8 + scrollProgress * 0.2}) rotate(${scrollProgress * 10}deg)`,
+          left: '50%',
+          top: '50%',
+          transform: `translate(-50%, -50%) scale(${0.9 + scrollProgress * 0.1})`,
         }}
       >
         <ProductBottle />
