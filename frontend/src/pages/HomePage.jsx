@@ -36,7 +36,16 @@ const HomePage = () => {
       </div>
       
       {/* Section 1: Hero - Why NERV */}
-      <div data-section="0" className="min-h-screen bg-white relative overflow-hidden flex items-center">
+      <div 
+        data-section="0" 
+        className="min-h-screen relative overflow-hidden flex items-center"
+        style={{
+          background: 'radial-gradient(ellipse at center, #f5f5f5 0%, #e8e8e8 25%, #d1d1d1 50%, #b8b8b8 75%, #9a9a9a 100%)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
         {/* Large background text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
           <div className="text-9xl font-bold text-gray-900 select-none tracking-wider transform -rotate-12">
