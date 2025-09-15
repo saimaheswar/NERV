@@ -19,69 +19,134 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
       <Header />
       
+      {/* Fixed bottle hook in the center */}
+      <div
+        ref={bottleRef}
+        className="fixed z-20 pointer-events-none transition-all duration-500 ease-out"
+        style={{
+          left: `${bottlePosition.x}px`,
+          top: `${bottlePosition.y}px`,
+          transform: `scale(${0.8 + scrollProgress * 0.2}) rotate(${scrollProgress * 10}deg)`,
+        }}
+      >
+        <ProductBottle />
+      </div>
+      
       {/* Section 1: Hero - Why NERV */}
-      <ScrollSection id="section-0" className="bg-white relative overflow-hidden">
+      <div data-section="0" className="min-h-screen bg-white relative overflow-hidden flex items-center">
         {/* Large background text */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="text-9xl font-bold text-gray-100 select-none tracking-wider transform -rotate-12">
-            NERV
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
+          <div className="text-9xl font-bold text-gray-900 select-none tracking-wider transform -rotate-12">
+            NERV FOCUS
           </div>
         </div>
 
-        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+        <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
-          <div className="space-y-6 z-10 relative">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <div className="space-y-8 z-10 relative">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
               ZERO SUGAR<br />
               <span className="text-pink-600">FOCUS ENHANCING</span><br />
               HYDRATION
             </h1>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-xl leading-relaxed">
               NERV is an innovative <span className="text-pink-600 font-semibold">premium focus enhancement</span> drink 
               designed to optimize <span className="text-gray-900 font-semibold">cognitive performance</span> and mental clarity. 
-              A carefully formulated blend of <span className="text-pink-600 font-semibold">natural nootropics</span> and 
-              brain-boosting nutrients.
+              A carefully formulated blend of <span className="text-pink-600 font-semibold">natural nootropics</span>, 
+              <span className="text-gray-900 font-semibold">adaptogens</span>, and brain-boosting nutrients that promote 
+              <span className="text-pink-600 font-semibold">alpha brainwave activity</span> for sustained focus.
             </p>
+            
+            {/* Key stats */}
+            <div className="grid grid-cols-3 gap-4 py-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-600">125mg</div>
+                <div className="text-sm text-gray-600">Caffeine</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-600">0g</div>
+                <div className="text-sm text-gray-600">Sugar</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-600">8-12Hz</div>
+                <div className="text-sm text-gray-600">Alpha Waves</div>
+              </div>
+            </div>
+            
             <Button 
-              className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-6 text-lg font-semibold"
+              className="bg-pink-600 hover:bg-pink-700 text-white px-12 py-6 text-xl font-semibold rounded-lg"
               onClick={() => document.getElementById('section-1').scrollIntoView({ behavior: 'smooth' })}
             >
-              BUY NOW +
+              EXPERIENCE FLOW STATE
             </Button>
           </div>
 
-          {/* Center - Product */}
-          <div className="flex justify-center">
-            <ProductBottle className="transform hover:scale-105 transition-transform duration-300" />
-          </div>
-
-          {/* Right content - Why NERV keywords */}
-          <div className="space-y-4 z-10 relative">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Why NERV?</h2>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Brain className="w-6 h-6 text-pink-600" />
-                <span className="text-gray-700"><span className="font-semibold text-gray-900">Enhanced Focus</span> & Concentration</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Zap className="w-6 h-6 text-pink-600" />
-                <span className="text-gray-700"><span className="font-semibold text-gray-900">Sustained Energy</span> Without Crashes</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Shield className="w-6 h-6 text-pink-600" />
-                <span className="text-gray-700"><span className="font-semibold text-gray-900">Stress Reduction</span> & Mental Clarity</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Focus className="w-6 h-6 text-pink-600" />
-                <span className="text-gray-700"><span className="font-semibold text-gray-900">Flow State</span> Activation</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Droplets className="w-6 h-6 text-pink-600" />
-                <span className="text-gray-700"><span className="font-semibold text-gray-900">Zero Sugar</span> Formula</span>
-              </div>
+          {/* Right content - Why NERV expanded */}
+          <div className="space-y-6 z-10 relative">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose NERV?</h2>
+            <div className="grid grid-cols-1 gap-4">
+              <Card className="bg-pink-50 border-pink-200 hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-4 flex items-center space-x-3">
+                  <Brain className="w-8 h-8 text-pink-600 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Enhanced Focus & Concentration</div>
+                    <div className="text-sm text-gray-600">Improves attention span and mental clarity for demanding tasks</div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-green-50 border-green-200 hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-4 flex items-center space-x-3">
+                  <Waves className="w-8 h-8 text-green-600 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Alpha Brainwave Activation</div>
+                    <div className="text-sm text-gray-600">Promotes relaxed alertness state for optimal cognitive performance</div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-4 flex items-center space-x-3">
+                  <Zap className="w-8 h-8 text-blue-600 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Sustained Energy Without Crashes</div>
+                    <div className="text-sm text-gray-600">Clean energy from L-theanine and caffeine synergy</div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-purple-50 border-purple-200 hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-4 flex items-center space-x-3">
+                  <Target className="w-8 h-8 text-purple-600 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Flow State Facilitation</div>
+                    <div className="text-sm text-gray-600">Helps achieve deep focus and peak performance zones</div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-orange-50 border-orange-200 hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-4 flex items-center space-x-3">
+                  <Shield className="w-8 h-8 text-orange-600 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Stress Resilience</div>
+                    <div className="text-sm text-gray-600">Adaptogens help manage cortisol and mental fatigue</div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-teal-50 border-teal-200 hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-4 flex items-center space-x-3">
+                  <TreePine className="w-8 h-8 text-teal-600 flex-shrink-0" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Natural Nootropic Formula</div>
+                    <div className="text-sm text-gray-600">Scientifically-backed natural compounds with zero artificial additives</div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
@@ -97,7 +162,7 @@ const HomePage = () => {
             <ChevronDown className="w-6 h-6" />
           </Button>
         </div>
-      </ScrollSection>
+      </div>
 
       {/* Section 2: How It Supports You */}
       <ScrollSection id="section-1" className="bg-gray-50 relative">
