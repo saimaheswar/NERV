@@ -166,129 +166,134 @@ const HomePage = () => {
       <div data-section="1" className="min-h-screen bg-gradient-to-br from-gray-50 to-pink-50 relative flex items-center">
         {/* Left side - Cognitive benefits */}
         <div className="absolute left-0 top-0 w-1/3 h-full flex items-center z-10">
-          <div className="p-8 space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Cognitive Enhancement</h3>
+          <div className="p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Cognitive Enhancement</h3>
             
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-pink-500">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <Activity className="w-6 h-6 text-pink-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Alpha Brainwave Activation</h4>
-                    <p className="text-xs text-gray-600">Promotes 8-12Hz frequency for relaxed alertness and optimal learning states.</p>
-                  </div>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4 hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Activity className="w-6 h-6 text-white" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Alpha Brainwave Activation</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">Promotes 8-12Hz frequency for relaxed alertness and optimal learning states.</p>
+                </div>
+              </div>
 
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <Brain className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Enhanced Neuroplasticity</h4>
-                    <p className="text-xs text-gray-600">Supports new neural connections and cognitive flexibility.</p>
-                  </div>
+              <div className="flex items-start space-x-4 hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Enhanced Neuroplasticity</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">Supports new neural connections and cognitive flexibility for better learning.</p>
+                </div>
+              </div>
 
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-green-500">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <Target className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Sustained Attention</h4>
-                    <p className="text-xs text-gray-600">L-theanine and caffeine enhance focus without crashes.</p>
-                  </div>
+              <div className="flex items-start space-x-4 hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Target className="w-6 h-6 text-white" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Sustained Attention</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">L-theanine and caffeine enhance focus without crashes or jitters.</p>
+                </div>
+              </div>
 
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-purple-500">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <Waves className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Flow State Facilitation</h4>
-                    <p className="text-xs text-gray-600">Creates conditions for peak performance and creativity.</p>
-                  </div>
+              <div className="flex items-start space-x-4 hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Waves className="w-6 h-6 text-white" />
                 </div>
-              </CardContent>
-            </Card>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">Flow State Facilitation</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">Creates optimal conditions for peak performance and creativity.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Right side - Performance metrics */}
         <div className="absolute right-0 top-0 w-1/3 h-full flex items-center z-10">
-          <div className="p-8 space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Performance Metrics</h3>
+          <div className="p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Performance Metrics</h3>
             
             {/* Performance stats */}
-            <div className="grid grid-cols-1 gap-3 mb-6">
-              <Card className="bg-gradient-to-br from-pink-500 to-pink-600 text-white">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold mb-1">40%</div>
-                  <div className="text-xs">Improved Focus Duration</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold mb-1">25%</div>
-                  <div className="text-xs">Faster Processing Speed</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-green-500 to-green-600 text-white">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold mb-1">60%</div>
-                  <div className="text-xs">Reduced Mental Fatigue</div>
-                </CardContent>
-              </Card>
-              <Card className="bg-gradient-to-br from-purple-500 to-purple-600 text-white">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold mb-1">3-4hrs</div>
-                  <div className="text-xs">Sustained Performance</div>
-                </CardContent>
-              </Card>
+            <div className="space-y-4">
+              <div className="flex items-center justify-between bg-gradient-to-r from-pink-100 to-pink-50 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div>
+                  <div className="text-2xl font-bold text-pink-600">40%</div>
+                  <div className="text-sm text-gray-700">Improved Focus Duration</div>
+                </div>
+                <div className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center">
+                  <Brain className="w-4 h-4 text-white" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between bg-gradient-to-r from-blue-100 to-blue-50 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div>
+                  <div className="text-2xl font-bold text-blue-600">25%</div>
+                  <div className="text-sm text-gray-700">Faster Processing Speed</div>
+                </div>
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-white" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between bg-gradient-to-r from-green-100 to-green-50 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div>
+                  <div className="text-2xl font-bold text-green-600">60%</div>
+                  <div className="text-sm text-gray-700">Reduced Mental Fatigue</div>
+                </div>
+                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                  <Shield className="w-4 h-4 text-white" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between bg-gradient-to-r from-purple-100 to-purple-50 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div>
+                  <div className="text-2xl font-bold text-purple-600">3-4hrs</div>
+                  <div className="text-sm text-gray-700">Sustained Performance</div>
+                </div>
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                  <Activity className="w-4 h-4 text-white" />
+                </div>
+              </div>
             </div>
 
-            {/* Additional benefits */}
-            <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <h4 className="text-sm font-bold text-gray-900 mb-3">Additional Benefits</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <Sparkles className="w-4 h-4 text-pink-600" />
-                    <span className="text-xs text-gray-700">Enhanced working memory</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <FlaskConical className="w-4 h-4 text-pink-600" />
-                    <span className="text-xs text-gray-700">Improved flexibility</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Shield className="w-4 h-4 text-pink-600" />
-                    <span className="text-xs text-gray-700">Stress protection</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Activity className="w-4 h-4 text-pink-600" />
-                    <span className="text-xs text-gray-700">Clean mental energy</span>
-                  </div>
+            {/* Additional benefits - blended design */}
+            <div className="space-y-3 mt-8">
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Additional Benefits</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <Sparkles className="w-5 h-5 text-pink-600" />
+                  <span className="text-sm text-gray-700">Enhanced working memory capacity</span>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex items-center space-x-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <FlaskConical className="w-5 h-5 text-pink-600" />
+                  <span className="text-sm text-gray-700">Improved cognitive flexibility</span>
+                </div>
+                <div className="flex items-center space-x-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <Shield className="w-5 h-5 text-pink-600" />
+                  <span className="text-sm text-gray-700">Stress-induced protection</span>
+                </div>
+                <div className="flex items-center space-x-3 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <Activity className="w-5 h-5 text-pink-600" />
+                  <span className="text-sm text-gray-700">Clean mental energy boost</span>
+                </div>
+              </div>
+            </div>
 
-            {/* Research backing */}
-            <Card className="bg-gray-900 text-white shadow-lg">
-              <CardContent className="p-4">
-                <h4 className="text-sm font-bold mb-2">Research-Backed</h4>
-                <p className="text-xs text-gray-300 mb-2">
-                  Based on peer-reviewed studies from leading neuroscience journals.
-                </p>
-                <div className="text-xs text-pink-400">
-                  Psychopharmacology • Cognitive Science
-                </div>
-              </CardContent>
-            </Card>
+            {/* Research backing - blended */}
+            <div className="mt-8 p-4 bg-gradient-to-r from-gray-100 to-gray-50 rounded-lg border-l-4 border-gray-600">
+              <h4 className="text-sm font-bold text-gray-900 mb-2">Research-Backed Formula</h4>
+              <p className="text-xs text-gray-600 mb-2">
+                Based on peer-reviewed studies from leading neuroscience journals.
+              </p>
+              <div className="text-xs text-pink-600 font-medium">
+                Psychopharmacology • Cognitive Science • Neuroplasticity
+              </div>
+            </div>
           </div>
         </div>
 
