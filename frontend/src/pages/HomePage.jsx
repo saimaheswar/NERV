@@ -323,100 +323,203 @@ const HomePage = () => {
         </div>
       </div>
 
-      {/* Section 3: Ingredients */}
-      <ScrollSection id="section-2" className="bg-white relative">
+      {/* Section 3: Premium Ingredients */}
+      <div data-section="2" className="min-h-screen bg-white relative flex items-center">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              POWERFUL <span className="text-pink-600">INGREDIENTS</span>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-900 mb-6">
+              PREMIUM <span className="text-pink-600">INGREDIENTS</span>
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Every ingredient in NERV is carefully selected and scientifically backed for optimal cognitive enhancement
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Every ingredient in NERV is carefully selected and scientifically backed for optimal cognitive enhancement. 
+              Our premium formulation combines the most effective nootropics, adaptogens, and natural compounds 
+              to deliver sustained focus without compromising your health.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            {/* Left ingredients */}
-            <div className="space-y-6">
-              <Card className="bg-pink-50 border-pink-200 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">L</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            {/* Left ingredients with detailed descriptions */}
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">Primary Active Compounds</h3>
+              
+              <Card className="bg-gradient-to-r from-pink-50 to-rose-50 border-pink-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-20 h-20 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-2xl">L</span>
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">L-Theanine (200mg)</h4>
+                      <p className="text-gray-700 mb-3">
+                        A natural amino acid found in tea leaves that promotes relaxed alertness by increasing alpha brainwave activity. 
+                        L-theanine synergizes perfectly with caffeine to provide smooth, sustained focus without jitters or anxiety.
+                      </p>
+                      <div className="text-sm text-pink-600 font-semibold">
+                        ✓ Reduces stress • ✓ Enhances attention • ✓ Promotes calm focus
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">L-Theanine</h3>
-                  <p className="text-gray-600 text-sm">Promotes calm focus and reduces jitters while enhancing cognitive performance</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gray-50 border-gray-200 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
+              <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-lg">125mg</span>
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Natural Caffeine (125mg)</h4>
+                      <p className="text-gray-700 mb-3">
+                        Precisely dosed natural caffeine from green coffee beans provides clean energy and enhanced alertness. 
+                        This optimal amount maximizes cognitive benefits while minimizing side effects like jitters or crashes.
+                      </p>
+                      <div className="text-sm text-green-600 font-semibold">
+                        ✓ Sustained energy • ✓ Enhanced alertness • ✓ No crash
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Natural Adaptogens</h3>
-                  <p className="text-gray-600 text-sm">Help your body adapt to stress and maintain mental balance</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-blue-50 border-blue-200 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-8 h-8 text-white" />
+              <Card className="bg-gradient-to-r from-purple-50 to-violet-50 border-purple-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <TreePine className="w-10 h-10 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Adaptogenic Complex</h4>
+                      <p className="text-gray-700 mb-3">
+                        A blend of premium adaptogens including Rhodiola Rosea, Ashwagandha, and Ginseng that help your body 
+                        adapt to stress while maintaining cognitive performance under pressure.
+                      </p>
+                      <div className="text-sm text-purple-600 font-semibold">
+                        ✓ Stress resilience • ✓ Mental stamina • ✓ Cortisol balance
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Nootropics Blend</h3>
-                  <p className="text-gray-600 text-sm">Cognitive enhancers that support memory and mental clarity</p>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Center - Product */}
-            <div className="flex justify-center">
-              <ProductBottle className="transform hover:scale-105 transition-transform duration-300" />
-            </div>
-
-            {/* Right ingredients */}
-            <div className="space-y-6">
-              <Card className="bg-green-50 border-green-200 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-sm">125mg</span>
+            {/* Right ingredients continued */}
+            <div className="space-y-8">
+              <h3 className="text-3xl font-bold text-gray-900 mb-8">Supporting Nutrients</h3>
+              
+              <Card className="bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-10 h-10 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Nootropic Blend</h4>
+                      <p className="text-gray-700 mb-3">
+                        A synergistic combination of Alpha-GPC, Huperzine A, and Bacopa Monnieri that supports memory formation, 
+                        neuroplasticity, and overall cognitive function for enhanced learning and recall.
+                      </p>
+                      <div className="text-sm text-blue-600 font-semibold">
+                        ✓ Memory enhancement • ✓ Learning support • ✓ Neuroprotection
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Caffeine</h3>
-                  <p className="text-gray-600 text-sm">Optimal 125mg dose for sustained energy without crashes or jitters</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-purple-50 border-purple-200 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Droplets className="w-8 h-8 text-white" />
+              <Card className="bg-gradient-to-r from-teal-50 to-cyan-50 border-teal-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-20 h-20 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Droplets className="w-10 h-10 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Electrolyte Matrix</h4>
+                      <p className="text-gray-700 mb-3">
+                        Essential minerals including sodium, potassium, and magnesium that maintain optimal hydration, 
+                        support cellular function, and enhance nutrient absorption for peak cognitive performance.
+                      </p>
+                      <div className="text-sm text-teal-600 font-semibold">
+                        ✓ Hydration support • ✓ Cellular function • ✓ Nutrient absorption
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Electrolytes</h3>
-                  <p className="text-gray-600 text-sm">Essential minerals for optimal hydration and cellular function</p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-orange-50 border-orange-200 hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">0</span>
+              <Card className="bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-8">
+                  <div className="flex items-start space-x-6">
+                    <div className="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-3xl">0</span>
+                    </div>
+                    <div>
+                      <h4 className="text-2xl font-bold text-gray-900 mb-3">Zero Sugar Formula</h4>
+                      <p className="text-gray-700 mb-3">
+                        Completely free from artificial sugars, sweeteners, and additives. NERV uses natural flavoring 
+                        and stevia leaf extract to deliver great taste without compromising your metabolic health.
+                      </p>
+                      <div className="text-sm text-orange-600 font-semibold">
+                        ✓ No sugar crash • ✓ Metabolic friendly • ✓ Natural sweetening
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Zero Sugar</h3>
-                  <p className="text-gray-600 text-sm">No artificial sugars or sweeteners, just clean natural energy</p>
+                </CardContent>
+              </Card>
+
+              {/* Quality assurance */}
+              <Card className="bg-gray-900 text-white shadow-xl">
+                <CardContent className="p-8">
+                  <h4 className="text-xl font-bold mb-4">Quality Assurance</h4>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <Shield className="w-4 h-4 text-pink-400" />
+                      <span>GMP Certified</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <FlaskConical className="w-4 h-4 text-pink-400" />
+                      <span>Third-Party Tested</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <TreePine className="w-4 h-4 text-pink-400" />
+                      <span>Natural Sourced</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Sparkles className="w-4 h-4 text-pink-400" />
+                      <span>No Artificial Additives</span>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="text-center mt-16">
-            <Button className="bg-pink-600 hover:bg-pink-700 text-white px-12 py-6 text-xl font-semibold rounded-lg">
-              EXPERIENCE NERV TODAY
+          {/* Final CTA Section */}
+          <div className="text-center mt-20">
+            <div className="mb-8">
+              <div className="inline-flex items-center space-x-4 bg-pink-100 rounded-full px-8 py-4">
+                <div className="text-sm font-semibold text-pink-800">PREMIUM QUALITY</div>
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <div className="text-sm font-semibold text-pink-800">SCIENTIFICALLY BACKED</div>
+                <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                <div className="text-sm font-semibold text-pink-800">ZERO COMPROMISE</div>
+              </div>
+            </div>
+            
+            <Button className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 text-white px-16 py-8 text-2xl font-bold rounded-xl shadow-xl">
+              UNLOCK YOUR FLOW STATE
             </Button>
-            <p className="text-gray-500 text-sm mt-4">Available at select retailers and online</p>
+            <p className="text-gray-500 text-lg mt-6">
+              Join thousands of professionals achieving peak cognitive performance
+            </p>
+            <div className="flex justify-center items-center space-x-8 mt-8 text-sm text-gray-400">
+              <span>🚚 Free shipping over $50</span>
+              <span>💸 30-day money back guarantee</span>
+              <span>⚡ Same-day processing</span>
+            </div>
           </div>
         </div>
-      </ScrollSection>
+      </div>
     </div>
   );
 };
