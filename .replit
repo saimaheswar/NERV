@@ -39,5 +39,5 @@ externalPort = 3000
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["bash", "-c", "cd backend && python server.py & cd frontend && npx serve -s build -l 5000"]
-build = ["npm", "run", "build"]
+run = ["bash", "-c", "cd backend && python server.py"]
+build = ["bash", "-c", "pip install -r backend/requirements.txt && cd frontend && npm ci && npm run build"]
