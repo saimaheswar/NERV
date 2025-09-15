@@ -6,10 +6,26 @@ import ScrollSection from '../components/ScrollSection';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { useScrollHook } from '../hooks/useScrollHook';
+import axios from 'axios';
 
 const HomePage = () => {
   const bottleRef = useRef(null);
   const { scrollProgress, currentSection, bottlePosition } = useScrollHook(bottleRef);
+  const [apiStatus, setApiStatus] = useState(null);
+  
+  useEffect(() => {
+    // Test API connection on component mount
+    const testAPI = async () => {
+      try {
+        const response = await axios.get('/api/');
+        setApiStatus({ type: 'success', message: 'API Connected: ' + response.data.message });
+      } catch (error) {
+        setApiStatus({ type: 'error', message: 'API Error: ' + error.message });
+      }
+    };
+    
+    testAPI();
+  }, []);
 
   const scrollToNext = () => {
     const nextSection = document.getElementById(`section-${Math.min(currentSection + 1, 2)}`);
@@ -21,6 +37,17 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white relative">
       <Header />
+      
+      {/* API Status Test Indicator */}
+      {apiStatus && (
+        <div className={`fixed top-4 right-4 z-50 px-4 py-2 rounded-lg text-sm font-medium ${
+          apiStatus.type === 'success' 
+            ? 'bg-green-100 text-green-800 border border-green-200' 
+            : 'bg-red-100 text-red-800 border border-red-200'
+        }`}>
+          {apiStatus.message}
+        </div>
+      )}
       
       {/* Fixed bottle hook in the center - always centered */}
       <div

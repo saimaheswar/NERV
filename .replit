@@ -15,45 +15,29 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Frontend"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Backend"
+args = "Server"
 
 [[workflows.workflow]]
-name = "Frontend"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd frontend && npm start"
-waitForPort = 5000
-
-[workflows.workflow.metadata]
-outputType = "webview"
-
-[[workflows.workflow]]
-name = "Backend"
+name = "Server"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "cd backend && python server.py"
-waitForPort = 8000
+waitForPort = 5000
 
 [workflows.workflow.metadata]
-outputType = "console"
+outputType = "webview"
 
 [[ports]]
 localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 8000
-externalPort = 8000
-exposeLocalhost = true
-
-[[ports]]
-localPort = 37963
+localPort = 39521
 externalPort = 3000
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["bash", "-c", "cd backend && python server.py & cd frontend && npx serve -s build -l 5000"]
+build = ["npm", "run", "build"]
