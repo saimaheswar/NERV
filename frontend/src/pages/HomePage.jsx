@@ -325,154 +325,156 @@ const HomePage = () => {
       <div data-section="2" className="min-h-screen bg-white relative flex items-center">
         {/* Left ingredients */}
         <div className="absolute left-0 top-0 w-1/3 h-full flex items-center z-10">
-          <div className="p-8 space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Primary Compounds</h3>
+          <div className="p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Primary Compounds</h3>
             
-            <Card className="bg-gradient-to-r from-pink-50 to-rose-50 border-pink-200 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-lg">L</span>
+            <div className="space-y-6">
+              <div className="group hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <span className="text-white font-bold text-xl">L</span>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">L-Theanine (200mg)</h4>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Natural amino acid that promotes relaxed alertness by increasing alpha brainwave activity.
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">L-Theanine</h4>
+                    <div className="text-sm font-semibold text-pink-600 mb-2">200mg</div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                      Natural amino acid that promotes relaxed alertness by increasing alpha brainwave activity for optimal focus.
                     </p>
-                    <div className="text-xs text-pink-600 font-semibold">
-                      ✓ Reduces stress • ✓ Calm focus
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-pink-100 text-pink-700 px-2 py-1 rounded-full">Reduces stress</span>
+                      <span className="bg-pink-100 text-pink-700 px-2 py-1 rounded-full">Calm focus</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
 
-            <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xs">125mg</span>
+              <div className="group hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <span className="text-white font-bold text-sm">125mg</span>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Natural Caffeine (125mg)</h4>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Precisely dosed from green coffee beans for clean energy and alertness.
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Natural Caffeine</h4>
+                    <div className="text-sm font-semibold text-green-600 mb-2">125mg</div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                      Precisely dosed from green coffee beans for clean energy and enhanced alertness without jitters.
                     </p>
-                    <div className="text-xs text-green-600 font-semibold">
-                      ✓ Sustained energy • ✓ No crash
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full">Sustained energy</span>
+                      <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full">No crash</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
 
-            <Card className="bg-gradient-to-r from-purple-50 to-violet-50 border-purple-200 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <TreePine className="w-6 h-6 text-white" />
+              <div className="group hover:transform hover:translate-x-2 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <TreePine className="w-7 h-7 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Adaptogenic Complex</h4>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Rhodiola, Ashwagandha, and Ginseng for stress adaptation and mental stamina.
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Adaptogenic Complex</h4>
+                    <div className="text-sm font-semibold text-purple-600 mb-2">Premium Blend</div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                      Rhodiola, Ashwagandha, and Ginseng work together for stress adaptation and mental stamina.
                     </p>
-                    <div className="text-xs text-purple-600 font-semibold">
-                      ✓ Stress resilience • ✓ Mental stamina
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Stress resilience</span>
+                      <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Mental stamina</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Right ingredients */}
         <div className="absolute right-0 top-0 w-1/3 h-full flex items-center z-10">
-          <div className="p-8 space-y-4">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Supporting Nutrients</h3>
+          <div className="p-8 space-y-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">Supporting Nutrients</h3>
             
-            <Card className="bg-gradient-to-r from-blue-50 to-cyan-50 border-blue-200 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Brain className="w-6 h-6 text-white" />
+            <div className="space-y-6">
+              <div className="group hover:transform hover:-translate-x-2 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <Brain className="w-7 h-7 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Nootropic Blend</h4>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Alpha-GPC, Huperzine A, and Bacopa for memory and cognitive function.
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Nootropic Blend</h4>
+                    <div className="text-sm font-semibold text-blue-600 mb-2">Cognitive Enhancement</div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                      Alpha-GPC, Huperzine A, and Bacopa Monnieri support memory formation and cognitive function.
                     </p>
-                    <div className="text-xs text-blue-600 font-semibold">
-                      ✓ Memory enhancement • ✓ Learning support
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Memory boost</span>
+                      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Learning support</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
 
-            <Card className="bg-gradient-to-r from-teal-50 to-cyan-50 border-teal-200 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Droplets className="w-6 h-6 text-white" />
+              <div className="group hover:transform hover:-translate-x-2 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <Droplets className="w-7 h-7 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Electrolyte Matrix</h4>
-                    <p className="text-xs text-gray-700 mb-2">
-                      Sodium, potassium, and magnesium for optimal hydration and cellular function.
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Electrolyte Matrix</h4>
+                    <div className="text-sm font-semibold text-teal-600 mb-2">Essential Minerals</div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                      Sodium, potassium, and magnesium maintain optimal hydration and cellular function.
                     </p>
-                    <div className="text-xs text-teal-600 font-semibold">
-                      ✓ Hydration support • ✓ Cellular function
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-teal-100 text-teal-700 px-2 py-1 rounded-full">Hydration support</span>
+                      <span className="bg-teal-100 text-teal-700 px-2 py-1 rounded-full">Cellular function</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
 
-            <Card className="bg-gradient-to-r from-orange-50 to-amber-50 border-orange-200 hover:shadow-xl transition-all duration-300">
-              <CardContent className="p-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">0</span>
+              <div className="group hover:transform hover:-translate-x-2 transition-all duration-300">
+                <div className="flex items-start space-x-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                    <span className="text-white font-bold text-2xl">0</span>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-900 mb-1">Zero Sugar Formula</h4>
-                    <p className="text-xs text-gray-700 mb-2">
-                      No artificial sugars or sweeteners, using natural stevia leaf extract.
+                  <div className="flex-1">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">Zero Sugar Formula</h4>
+                    <div className="text-sm font-semibold text-orange-600 mb-2">Clean & Natural</div>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                      No artificial sugars or sweeteners, using natural stevia leaf extract for great taste.
                     </p>
-                    <div className="text-xs text-orange-600 font-semibold">
-                      ✓ No sugar crash • ✓ Metabolic friendly
+                    <div className="flex flex-wrap gap-2 text-xs">
+                      <span className="bg-orange-100 text-orange-700 px-2 py-1 rounded-full">No sugar crash</span>
+                      <span className="bg-orange-100 text-orange-700 px-2 py-1 rounded-full">Metabolic friendly</span>
                     </div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            {/* Quality assurance */}
-            <Card className="bg-gray-900 text-white shadow-xl">
-              <CardContent className="p-4">
-                <h4 className="text-sm font-bold mb-3">Quality Assurance</h4>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="flex items-center space-x-1">
-                    <Shield className="w-3 h-3 text-pink-400" />
-                    <span>GMP Certified</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <FlaskConical className="w-3 h-3 text-pink-400" />
-                    <span>Third-Party Tested</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <TreePine className="w-3 h-3 text-pink-400" />
-                    <span>Natural Sourced</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <Sparkles className="w-3 h-3 text-pink-400" />
-                    <span>No Additives</span>
-                  </div>
+            {/* Quality assurance - blended design */}
+            <div className="mt-8 p-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border-l-4 border-gray-600">
+              <h4 className="text-lg font-bold text-gray-900 mb-3">Quality Assurance</h4>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <Shield className="w-4 h-4 text-pink-600" />
+                  <span className="text-gray-700">GMP Certified</span>
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <FlaskConical className="w-4 h-4 text-pink-600" />
+                  <span className="text-gray-700">Third-Party Tested</span>
+                </div>
+                <div className="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <TreePine className="w-4 h-4 text-pink-600" />
+                  <span className="text-gray-700">Natural Sourced</span>
+                </div>
+                <div className="flex items-center space-x-2 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                  <Sparkles className="w-4 h-4 text-pink-600" />
+                  <span className="text-gray-700">No Additives</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
